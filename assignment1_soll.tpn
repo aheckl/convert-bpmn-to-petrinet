@@ -1,0 +1,57 @@
+place "P0" init 1;
+place "P1";
+place "P2";
+place "P3";
+place "P4";
+place "P5";
+place "P6";
+place "P7";
+place "P8";
+place "P9";
+place "P10";
+place "P11";
+
+
+trans "T1"~"startMachine"
+  in "P0", "P10"
+  out "P1";
+
+trans "T2"~"measurePerformance"
+  in "P1", "P4"
+  out "P2";
+
+trans "T3"~"sendInformation"
+  in "P2"
+  out "P3";
+
+trans "T4"~"calculateOEE"
+  in "P3"
+  out "P4";
+
+trans "T5"~"silent"
+  in "P4"
+  out "P5", "P6";
+
+trans "T6"~"sendEmail"
+  in "P5"
+  out "P7";
+
+trans "T7"~"stopMachine"
+  in "P6"
+  out "P7";
+
+trans "T8"~"analyzeLog"
+  in "P7"
+  out "P8";
+
+trans "T9"~"tryToRepair"
+  in "P8"
+  out "P9";
+
+trans "T10"~"documentRepair"
+  in "P9"
+  out "P10";
+
+trans "T11"~"disconnectMachine"
+  in "P10"
+  out "P11";

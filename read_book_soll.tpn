@@ -1,0 +1,16 @@
+place "P0" init 1;
+place "P1";
+place "P2";
+place "P3";
+
+trans "T1"~"openBook"
+  in "P0"
+  out "P1";
+
+trans "T2"~"readBook"
+  in "P1"
+  out "P2";
+
+trans "T3"~"closeBook"
+  in "P2"
+  out "P3";
